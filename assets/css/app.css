@@ -4907,25 +4907,29 @@ h1, h2, h3, h4, h5, h6, li, ol, p, small, strong {
   background: rgba(255, 0, 0, 0.5); }
 
 .hero {
-  margin-top: 300px;
+  margin-top: 200px;
   background: #111415; }
   .hero .row.wrapper {
     max-width: 1266px; }
   .hero h1 {
+    font-family: 'Roboto', sans-serif;
     position: relative;
-    font-size: 3.5em; }
+    font-size: 3.6em; }
     .hero h1 :after {
       content: "";
       position: absolute;
-      width: 0.29167em;
-      height: 0.29167em;
-      right: -0.29167em;
-      top: 0.14583em;
+      width: 0.3em;
+      height: 0.3em;
+      right: -0.3em;
+      top: 0.15em;
       background: #00A3D9;
       -webkit-border-radius: 50%;
       border-radius: 50%; }
   .hero h4 {
-    font-size: 1.75em; }
+    color: #898B8C;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.98em;
+    font-weight: 100; }
     .hero h4 strong {
       color: #00A3D9;
       font-weight: normal; }
@@ -4936,3 +4940,31 @@ h1, h2, h3, h4, h5, h6, li, ol, p, small, strong {
     margin-top: -19px; }
 
 /* hero */
+/* -----------------------------------------
+   RESPONSIVE HACKS
+----------------------------------------- */
+/* Used to alter styles for screens at least 320px wide. This is where the grid changes. */
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+  /* hero */
+  .hero {
+    margin-top: 50px; }
+    .hero h1 {
+      display: inline-block;
+      margin-bottom: 0;
+      font-size: 2em; }
+      .hero h1 :after {
+        width: 0.16667em;
+        height: 0.16667em;
+        right: -0.16667em;
+        top: 0.04167em; }
+    .hero h4 {
+      font-size: 0.95em;
+      margin-top: -0.3em;
+      margin-bottom: 50px; }
+    .hero .left-side {
+      text-align: center;
+      padding: 2em 0 0 0; }
+    .hero .right-side {
+      text-align: center; } }
+
+/* end (min-width: 320px) and (max-width: 767px) */

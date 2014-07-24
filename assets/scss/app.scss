@@ -8,6 +8,7 @@
 @import "foundation";
 
 
+// Colours
 $black: #111415;
 $black-light: #202426;
 $white: #FBFBFB;
@@ -16,6 +17,12 @@ $blue-light: #31C3FF;
 $grey-dark: #656768;
 $grey: #898B8C;
 $grey-light: #C2C3C2;
+
+// Tipographies
+$font: 'Roboto', sans-serif;
+$font-condensed: 'Roboto Condensed', sans-serif;
+
+// Mixins
 @mixin border-radius($radius: 3px){
   -webkit-border-radius: $radius;
   border-radius: $radius;
@@ -39,13 +46,14 @@ h1, h2, h3, h4, h5, h6, li, ol, p, small, strong{
 
 // HERO SECTION
 .hero{
-    margin-top: 300px;
+    margin-top: 200px;
     background: $black;
     .row.wrapper{
         max-width: 1266px;
     }
     h1{
-        $size: 3.5em;
+        font-family: $font;
+        $size: 3.6em;
         position: relative;
         font-size: $size;
         :after{
@@ -61,7 +69,10 @@ h1, h2, h3, h4, h5, h6, li, ol, p, small, strong{
         }
     }
     h4{
-        font-size: 1.75em;
+        color: $grey;
+        font-family: $font-condensed;
+        font-size: 1.98em;
+        font-weight: 100;
         strong{
             color: $blue;
             font-weight: normal;
@@ -75,3 +86,41 @@ h1, h2, h3, h4, h5, h6, li, ol, p, small, strong{
         margin-top: -19px;
     }
 }/* hero */
+
+
+
+/* -----------------------------------------
+   RESPONSIVE HACKS
+----------------------------------------- */
+/* Used to alter styles for screens at least 320px wide. This is where the grid changes. */
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+    // HERO SECTION
+    .hero{
+        margin-top: 50px;
+        h1{
+            display: inline-block;
+            margin-bottom: 0;
+            $size: 2em;
+            font-size: $size;
+            :after{
+                $width: $size/12;
+                width: $width;
+                height: $width;
+                right: -($width);
+                top: ($width/4);
+            }
+        }
+        h4{
+            font-size: 0.95em;
+            margin-top: -0.3em;
+            margin-bottom: 50px;
+        }
+        .left-side{
+            text-align: center;
+            padding: 2em 0 0 0;
+        }
+        .right-side{
+            text-align: center;
+        }
+    }/* hero */
+} /* end (min-width: 320px) and (max-width: 767px) */
