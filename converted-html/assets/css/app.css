@@ -4894,16 +4894,45 @@ th.hide-for-touch {
     display: table-cell !important; } }
 
 body {
-  background: #191e28; }
+  background: #656768 url("../img/body-bg.png");
+  background-size: cover; }
 
 h1, h2, h3, h4, h5, h6, li, ol, p, small, strong {
-  color: white; }
+  color: #FBFBFB; }
 
 .align-center {
   text-align: center; }
 
-.title {
-  margin-top: 20%; }
-  .title h1 strong {
-    color: DeepSkyBlue;
-    font-weight: normal; }
+.container {
+  background: rgba(255, 0, 0, 0.5); }
+
+.hero {
+  margin-top: 300px;
+  background: #111415; }
+  .hero .row.wrapper {
+    max-width: 1266px; }
+  .hero h1 {
+    position: relative;
+    font-size: 3.5em; }
+    .hero h1 :after {
+      content: "";
+      position: absolute;
+      width: 0.29167em;
+      height: 0.29167em;
+      right: -0.29167em;
+      top: 0.14583em;
+      background: #00A3D9;
+      -webkit-border-radius: 50%;
+      border-radius: 50%; }
+  .hero h4 {
+    font-size: 1.75em; }
+    .hero h4 strong {
+      color: #00A3D9;
+      font-weight: normal; }
+  .hero .left-side {
+    text-align: right;
+    padding: 140px 40px 0 0; }
+  .hero .right-side {
+    margin-top: -19px; }
+
+/* hero */
