@@ -1,0 +1,77 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+// Global Foundation Settings
+@import "foundation/settings";
+
+// You can import only specific elements by adjusting the import below
+@import "foundation";
+
+
+$black: #111415;
+$black-light: #202426;
+$white: #FBFBFB;
+$blue: #00A3D9;
+$blue-light: #31C3FF;
+$grey-dark: #656768;
+$grey: #898B8C;
+$grey-light: #C2C3C2;
+@mixin border-radius($radius: 3px){
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+body{
+    background: $grey-dark url("../img/body-bg.png");
+    background-size: cover;
+}
+h1, h2, h3, h4, h5, h6, li, ol, p, small, strong{
+    color: $white;
+}
+
+.align-center{
+    text-align: center;
+}
+.container{
+    background: transparentize(red, 0.5);
+}
+
+
+// HERO SECTION
+.hero{
+    margin-top: 300px;
+    background: $black;
+    .row.wrapper{
+        max-width: 1266px;
+    }
+    h1{
+        $size: 3.5em;
+        position: relative;
+        font-size: $size;
+        :after{
+            $width: $size/12;
+            content: "";
+            position: absolute;
+            width: $width;
+            height: $width;
+            right: -($width);
+            top: ($width/2);
+            background: $blue;
+            @include border-radius(50%);
+        }
+    }
+    h4{
+        font-size: 1.75em;
+        strong{
+            color: $blue;
+            font-weight: normal;
+        }
+    }
+    .left-side{
+        text-align: right;
+        padding: 140px 40px 0 0;
+    }
+    .right-side{
+        margin-top: -19px;
+    }
+}/* hero */
